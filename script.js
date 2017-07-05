@@ -11,7 +11,18 @@ var locations = ["Machu Picchu","Candy Mountain","Nana Funks","Innovation Depot"
     // console.log(clue)
 }    
 });
+ 
+ $(this).bind('click', function(){
+        clue()
+})
 
 $("<h3></h3>").click( function() { alert('clicked');
 console.log(fuck)
  });
+
+ function clue(){
+    var randFriend = friends[Math.floor(Math.random() * friends.length)];
+    var randLocations = locations[Math.floor(Math.random() * locations.length)];
+    var randWeapons = weapons[Math.floor(Math.random() * weapons.length)];
+    alert(randFriend + ' did it in ' + randLocations + ' with a ' + randWeapons)
+}
